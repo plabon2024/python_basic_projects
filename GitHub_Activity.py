@@ -16,8 +16,8 @@ if response.status_code == 200:
     user_info = user_content.json()  # convert obj/json to dict using request module
     event_info = event_content.json()  # convert obj/json to dict  using request module
 
-    name = user_info.get('name', 'Name not available').title()  # get name...account detils using get method from dict
-    location = user_info.get("location", 'Not found !').title()
+    name = user_info.get('name', 'Name not available') # get name...account detils using get method from dict
+    location = user_info.get("location", 'Not found !')
     follower = user_info.get("followers", "None")
     following = user_info.get('following', "None")
     account_created = user_info.get("created_at")
